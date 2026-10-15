@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class LIANG3_5 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter today's day: ");
+        int today = input.nextInt();
+
+        System.out.print("Enter the number of days elapsed since today: ");
+        int elapsedDays = input.nextInt();
+
+        int futureDay = (today + elapsedDays) % 7;
+
+        String todayName = "";
+        if (today == 0) {
+            todayName = "Sunday";
+        } else if (today == 1) {
+            todayName = "Monday";
+        } else if (today == 2) {
+            todayName = "Tuesday";
+        } else if (today == 3) {
+            todayName = "Wednesday";
+        } else if (today == 4) {
+            todayName = "Thursday";
+        } else if (today == 5) {
+            todayName = "Friday";
+        } else if (today == 6) {
+            todayName = "Saturday";
+        }
+
+        String futureDayName = "";
+        if (futureDay == 0) {
+            futureDayName = "Sunday";
+        } else if (futureDay == 1) {
+            futureDayName = "Monday";
+        } else if (futureDay == 2) {
+            futureDayName = "Tuesday";
+        } else if (futureDay == 3) {
+            futureDayName = "Wednesday";
+        } else if (futureDay == 4) {
+            futureDayName = "Thursday";
+        } else if (futureDay == 5) {
+            futureDayName = "Friday";
+        } else if (futureDay == 6) {
+            futureDayName = "Saturday";
+        }
+
+        System.out.println("Today is " + todayName + " and the future day is " + futureDayName);
+
+        input.close();
+    }
+}
